@@ -56,7 +56,7 @@ const Hero = () => {
           <div className="flex flex-wrap items-center gap-4">
             {/* Left: Users */}
             <div className="flex items-center gap-2 bg-white px-3 sm:px-4 py-2 rounded-xl shadow-sm w-full sm:w-auto">
-              <Users className="text-blue-600 flex-shrink-0" size={20} />
+              <Users className="text-blue-600 shrink-0" size={20} />
               <p className="text-sm text-gray-700 font-medium">
                 More than 50 Doctors in your Doctify
               </p>
@@ -64,7 +64,7 @@ const Hero = () => {
 
             {/* Right: Calling */}
             <div className="flex items-center gap-2 bg-white px-3 sm:px-4 py-2 rounded-xl shadow-sm w-full sm:w-auto">
-              <Phone className="text-green-600 flex-shrink-0" size={20} />
+              <Phone className="text-green-600 shrink-0" size={20} />
               <p className="text-sm text-gray-700 font-medium">Calling…</p>
             </div>
           </div>
