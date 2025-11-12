@@ -12,6 +12,22 @@ export default function Care() {
   ];
 
   return (
+ <>
+<div className="flex flex-col items-center text-center mb-12">
+  {/* Main Heading */}
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight" style={{ fontFamily: "Poppins" }}>
+    We Care About Your Health
+  </h1>
+
+  {/* Subheading / Accent */}
+  <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl">
+    Providing compassionate, expert care for every stage of your health journey.
+  </p>
+
+  {/* Optional underline accent */}
+  <div className="mt-6 w-20 h-1 bg-blue-600 rounded-full"></div>
+</div>
+
     <section className="mx-34 bg-white py-16" style={{fontFamily : "poppins"}}>
       <div className=" px-6 flex flex-col lg:flex-row items-center gap-12">
         {/* Left Image */}
@@ -57,5 +73,6 @@ export default function Care() {
       
       
     </section>
+ </>
   );
 }
