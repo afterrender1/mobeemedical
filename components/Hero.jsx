@@ -11,10 +11,16 @@ import {
 
 const Hero = () => {
   return (
+<>
+
+
     <section
-      className="w-full py-10 bg-white"
+      className="w-full py-10 bg-white select-none"
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
+        
+
+        
       <div className="mx-0 sm:mx-2 md:mx-2 lg:mx-2 xl:mx-30 px-4 sm:px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* LEFT SIDE */}
         <div className="rounded-2xl p-6 sm:p-8 md:p-10 h-auto lg:h-[650px] bg-linear-to-br from-[#bbdcfc] via-[#ebdbf7] to-[#e9d7bb] flex flex-col justify-center shadow-md">
@@ -84,6 +90,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+</>
   );
 };
 
