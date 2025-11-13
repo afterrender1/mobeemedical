@@ -30,18 +30,17 @@ const Hero = () => {
           </span>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug mb-6 sm:mb-8">
-            Your Health, Our Technology.
-            <br className="hidden sm:block" /> Trusted Doctors at Your
-            Fingertips.
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 leading-snug mb-6 sm:mb-8">
+          Your Partner in Better
+            <br className="hidden sm:block" /> Health and Wellness
+
           </h1>
 
           {/* Paragraph */}
-          <p className="text-gray-700 text-base sm:text-lg mb-6 sm:mb-10">
-            Whether in person or online, Doctify connects you with certified,
-            compassionate healthcare professionals — quickly, safely, and
-            effortlessly.
-          </p>
+        <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-6 sm:mb-10 leading-relaxed">
+  At Mobee Medical, we deliver expert, personalized care <br />
+  tailored to your needs — from weight loss solutions to chronic condition management.
+</p>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 mb-8 sm:mb-10">
@@ -53,7 +52,7 @@ const Hero = () => {
             </button>
 
             <button className="text-gray-800 flex items-center justify-center gap-2 border border-gray-400 px-6 sm:px-8 py-3 rounded-full cursor-pointer font-semibold hover:bg-gray-50 transition w-full sm:w-auto">
-              See How It Works
+              Schedule a visit
               <CircleArrowOutUpRight size={20} className="text-black" />
             </button>
           </div>

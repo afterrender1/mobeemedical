@@ -8,10 +8,10 @@ const WeUnderstand = () => {
       {/* Section Heading */}
       <div className="flex flex-col items-center text-center mb-1 mt-24 px-4">
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight"
+          className="text-4xl sm:text-5xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight"
           style={{ fontFamily: "Poppins" }}
         >
-          We Understand Your Challenges—<br className="hidden sm:block" />And We
+          We Understand Your  Challenges <br/> And We
           Are Here to Help
         </h1>
 
