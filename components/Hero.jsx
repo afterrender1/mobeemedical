@@ -79,7 +79,7 @@ const Hero = () => {
         <div className="relative flex justify-center order-first lg:order-last">
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[650px] rounded-2xl overflow-hidden shadow-md">
             <Image
-              src="/images/hero.png"
+              src="/images/realhero2.png"
               alt="Doctors"
               fill
               className="object-cover object-center"
