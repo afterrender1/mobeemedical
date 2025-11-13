@@ -8,6 +8,7 @@ import WeightLoss from './WeightLoss'
 import WeUnderstand from './WeUnderstand'
 import Testimonials from './Testimonials'
 import AcceptedInsure from './AcceptInsure'
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
 <WeUnderstand/>
 <Testimonials/>
 <AcceptedInsure/>
+<Footer/>
     </>
   )
 }

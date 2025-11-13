@@ -15,7 +15,7 @@ const Hero = () => {
 
 
     <section
-      className="w-full h-screen py-10  bg-white select-none "
+      className="w-full h-screen  bg-white select-none  pt-20  "
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
         
