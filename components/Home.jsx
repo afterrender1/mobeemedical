@@ -7,6 +7,7 @@ import { Weight } from 'lucide-react'
 import WeightLoss from './WeightLoss'
 import WeUnderstand from './WeUnderstand'
 import Testimonials from './Testimonials'
+import AcceptedInsure from './AcceptInsure'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
     <WeightLoss/>
 <WeUnderstand/>
 <Testimonials/>
+<AcceptedInsure/>
     </>
   )
 }

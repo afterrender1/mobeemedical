@@ -133,7 +133,7 @@ const Testimonials = () => {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="flex-none w-[95%] sm:w-[60%] lg:w-[33%] bg-white border border-gray-100 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-18"
+              className="flex-none w-[95%] sm:w-[60%] lg:w-[33%] bg-white border border-gray-200 rounded-3xl hover:-translate-y-1 transition-all duration-500 p-18"
             >
               <div className="flex justify-center mb-4">
                 {[...Array(item.rating)].map((_, i) => (
