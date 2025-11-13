@@ -14,7 +14,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const serviceLinks = [
-    { name: "IMMIGRATION PHYSICALS", href: "/services/implants" },
+    { name: "IMMIGRATION PHYSICALS", href: "/immigration-physicals" },
     { name: "PREVENTATIVE SERVICES", href: "/services/cosmetic" },
     { name: "WEIGHTLOSS MANAGEMENT", href: "/services/orthodontics" },
     { name: "ACUTE AND CHRONIC CARE MANAGEMENT", href: "/services/whitening" },
