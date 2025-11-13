@@ -14,10 +14,10 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const serviceLinks = [
-    { name: "Dental Implants", href: "/services/implants" },
-    { name: "Cosmetic Dentistry", href: "/services/cosmetic" },
-    { name: "Orthodontics", href: "/services/orthodontics" },
-    { name: "Teeth Whitening", href: "/services/whitening" },
+    { name: "IMMIGRATION PHYSICALS", href: "/services/implants" },
+    { name: "PREVENTATIVE SERVICES", href: "/services/cosmetic" },
+    { name: "WEIGHTLOSS MANAGEMENT", href: "/services/orthodontics" },
+    { name: "ACUTE AND CHRONIC CARE MANAGEMENT", href: "/services/whitening" },
   ];
 
   return (
@@ -66,28 +66,66 @@ export default function Navbar() {
               />
             </button>
 
-            <AnimatePresence>
-              {servicesOpen && (
-                <motion.ul
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-0 bg-white shadow-md rounded-lg overflow-hidden z-50 w-48 border border-gray-100"
-                >
-                  {serviceLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="block px-4 py-2 hover:bg-gray-100 text-gray-700"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </motion.ul>
-              )}
-            </AnimatePresence>
+      <AnimatePresence>
+  {servicesOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
+      transition={{ 
+        duration: 0.28,
+        ease: [0.32, 0, 0.2, 1],
+      }}
+      className="absolute top-14 left-1/2 -translate-x-1/2 w-72 
+                 bg-white rounded-2xl shadow-xl 
+                 border border-gray-200/80 
+                 overflow-hidden z-50 
+                 ring-1 ring-black/5"
+      style={{
+        boxShadow: `
+          0 20px 25px -5px rgba(0, 0, 0, 0.06),
+          0 8px 10px -6px rgba(0, 0, 0, 0.06),
+          0 0 0 1px rgba(0, 0, 0, 0.04)
+        `
+      }}
+    >
+      <motion.ul className="py-2">
+        {serviceLinks.map((link, index) => (
+          <motion.li
+            key={link.name}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.05, duration: 0.3 }}
+          >
+            <Link
+              href={link.href}
+              onClick={() => setServicesOpen(false)}
+              className="flex items-center justify-between 
+                         px-6 py-3.5 text-gray-800 font-medium text-base
+                         hover:bg-gray-50/80 
+                         hover:text-[#066BAA] 
+                         transition-all duration-200 
+                         group"
+            >
+              <span className="tracking-tight">{link.name}</span>
+              
+              <motion.span
+                className="text-[#066BAA] opacity-0 group-hover:opacity-100 
+                           translate-x-0 group-hover:translate-x-1 
+                           transition-all duration-300 font-bold"
+              >
+                →
+              </motion.span>
+            </Link>
+          </motion.li>
+        ))}
+      </motion.ul>
+
+      {/* Subtle bottom divider */}
+      <div className="h-px bg-linear-to-r from-transparent via-gray-200 to-transparent" />
+    </motion.div>
+  )}
+</AnimatePresence>
           </li>
 
           <li>
@@ -95,11 +133,11 @@ export default function Navbar() {
               Patient Portal
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/blog" className="hover:text-blue-600 transition">
               Blog
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/contactus" className="hover:text-blue-600 transition">
               Contact Us
@@ -211,7 +249,7 @@ export default function Navbar() {
                   Patient Portal
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/blog"
                   className="block hover:text-blue-600 transition"
@@ -219,7 +257,7 @@ export default function Navbar() {
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/contact"
