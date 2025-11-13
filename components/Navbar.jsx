@@ -45,7 +45,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/team" className="hover:text-blue-600 transition">
+            <Link href="/ourteam" className="hover:text-blue-600 transition">
               Meet the Team
             </Link>
           </li>

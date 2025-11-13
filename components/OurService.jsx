@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 const services = [
@@ -29,7 +30,7 @@ const services = [
 export default function OurServices() {
   return (
     <section className="w-full bg-gray-50 py-16" style={{fontFamily : "poppins"}}>
-      <div className="max-w-[1650px] mx-auto px-6">
+      <div className="max-w-[1250px] mx-auto px-6">
    <div className="text-center mb-12">
   {/* Section Heading */}
   <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
@@ -55,11 +56,13 @@ export default function OurServices() {
               className="bg-white rounded-3xl p-6 flex flex-col justify-between shadow hover:shadow-lg transition"
             >
               {/* Icon/Image */}
-              <div className="w-full h-140 mb-6 relative">
-                <img
+              <div className="w-full h-110 mb-6 relative">
+                <Image
                   src={service.icon}
                   alt={service.title}
-                  className="object-cover w-full h-full rounded-2xl"
+               fill
+               priority
+                  className="rounded"
                 />
               </div>
 

@@ -13,7 +13,7 @@ export default function Footer() {
           {/* About */}
           <div className="md:w-1/3 mb-8 md:mb-0">
            <Image
-              src="/images/logos/mobeebgremove.png"
+              src="/images/logos/mmwhite.png"
               alt="Logo"
               width={180}
               height={60}
