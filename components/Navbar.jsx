@@ -101,7 +101,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-blue-600 transition">
+            <Link href="/contactus" className="hover:text-blue-600 transition">
               Contact Us
             </Link>
           </li>
