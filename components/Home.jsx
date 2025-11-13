@@ -6,6 +6,7 @@ import OurServices from './OurService'
 import { Weight } from 'lucide-react'
 import WeightLoss from './WeightLoss'
 import WeUnderstand from './WeUnderstand'
+import Testimonials from './Testimonials'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
     <OurServices/>
     <WeightLoss/>
 <WeUnderstand/>
+<Testimonials/>
     </>
   )
 }
