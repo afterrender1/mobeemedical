@@ -61,7 +61,7 @@ export default function ChronicCarePage() {
               { icon: ShieldCheck, stat: "50%", desc: "of adults have high blood pressure, the “silent killer.”" },
               { icon: Stethoscope, stat: "70%", desc: "of annual U.S. deaths are due to chronic diseases—many preventable." },
             ].map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 text-center hover:shadow-xl transition-shadow">
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} className="bg-linear-to-br from-slate-50 to-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 text-center hover:shadow-xl transition-shadow">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#066BAA]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                   <item.icon className="w-6 sm:w-8 h-6 sm:h-8 text-[#066BAA]" />
                 </div>
@@ -135,7 +135,7 @@ export default function ChronicCarePage() {
               { title: "Personalized Treatment Plans", desc: "Custom strategies combining medication, lifestyle changes, and ongoing monitoring." },
               { title: "Continuous Support", desc: "Regular check-ins, education, and adjustments to keep you on track." },
             ].map((step, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} className="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-6 sm:p-8 shadow-lg border border-slate-200">
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} className="bg-linear-to-br from-slate-50 to-white rounded-3xl p-6 sm:p-8 shadow-lg border border-slate-200">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#066BAA]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                   <HeartPulse className="w-6 sm:w-8 h-6 sm:h-8 text-[#066BAA]" />
                 </div>
