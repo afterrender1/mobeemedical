@@ -15,13 +15,7 @@ import MoveToTop from "@/components/MoveToTop";
 export default function PreventativeCarePage() {
   return (
     <>
-      {/* Skip to Content Link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#066BAA] text-white px-6 py-3 rounded-full font-semibold z-50 shadow-lg"
-      >
-        Skip to content
-      </a>
+ 
 
       <Navbar />
 
