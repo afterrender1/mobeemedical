@@ -18,7 +18,7 @@ const Hero = () => {
     >
       <div className="mx-auto max-w-8xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 xl:mx-30 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* LEFT SIDE */}
-        <div className="rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 h-auto lg:h-[650px] bg-gradient-to-br from-[#bbdcfc] via-[#ebdbf7] to-[#e9d7bb] flex flex-col justify-center shadow-lg">
+        <div className="rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 h-auto lg:h-[650px] bg-linear-to-br from-[#bbdcfc] via-[#ebdbf7] to-[#e9d7bb] flex flex-col justify-center shadow-lg">
           {/* Tag */}
           <span className="inline-block mb-5 sm:mb-6 md:mb-7 text-xs sm:text-sm md:text-base font-medium text-blue-700 bg-blue-100 px-3 py-2 sm:py-2.5 md:py-3 rounded-full w-fit">
             24/7 Services Available
