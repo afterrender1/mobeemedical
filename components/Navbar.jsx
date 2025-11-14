@@ -105,7 +105,7 @@ export default function Navbar() {
                       </motion.li>
                     ))}
                   </motion.ul>
-                  <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+                  <div className="h-px bg-linear-to-r from-transparent via-gray-200 to-transparent" />
                 </motion.div>
               )}
             </AnimatePresence>
