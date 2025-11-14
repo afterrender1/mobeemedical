@@ -50,7 +50,7 @@ export default function Care() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="flex flex-col items-center text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6"
+        className="flex flex-col items-center text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6 mt-10"
       >
         <motion.h1
           variants={itemVariants}
