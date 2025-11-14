@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -29,11 +30,52 @@ const services = [
 ];
 
 export default function OurServices() {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
+  const cardHover = {
+    hover: { y: -10, scale: 1.02 },
+  };
+
+  const imageHover = {
+    hover: { scale: 1.08 },
+  };
+
   return (
-    <section className="w-full bg-gray-50 py-12 sm:py-16 md:py-20" style={{ fontFamily: "Poppins" }}>
-      <div className="max-w-[1250px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+    <section
+      className="w-full bg-gray-50 py-12 sm:py-16 md:py-20"
+      style={{ fontFamily: "Poppins" }}
+    >
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+        className="max-w-[1250px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16"
+      >
         {/* Header */}
-        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+        <motion.div
+          variants={itemVariants}
+          className="text-center mb-10 sm:mb-12 md:mb-16"
+        >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
             Our Services
           </h2>
@@ -42,52 +84,68 @@ export default function OurServices() {
             Whether you are ready to take control of your weight, manage a chronic condition, or stay proactive with preventative care, our experts at Mobee Medical are here to guide and support you every step of the way.
           </p>
 
-          <div className="mt-4 sm:mt-6 w-20 sm:w-24 h-1 bg-blue-600 rounded-full mx-auto"></div>
-        </div>
+          <motion.div
+            variants={itemVariants}
+            className="mt-4 sm:mt-6 w-20 sm:w-24 h-1 bg-blue-600 rounded-full mx-auto"
+          />
+        </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8"
+        >
           {services.map((service) => (
-            <div
+            <motion.div
               key={service.title}
+              variants={itemVariants}
+              whileHover="hover"
               className="bg-white rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow hover:shadow-lg transition-shadow duration-300"
             >
               {/* Image Container */}
-              <div className="w-full h-48 xs:h-52 sm:h-56 md:h-60 lg:h-64 mb-5 sm:mb-6 relative overflow-hidden rounded-2xl">
+              <motion.div
+                variants={imageHover}
+                className="w-full h-48 xs:h-52 sm:h-56 md:h-60 lg:h-64 mb-5 sm:mb-6 relative overflow-hidden rounded-2xl"
+              >
                 <Image
                   src={service.icon}
                   alt={service.title}
                   fill
                   priority
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-              </div>
+              </motion.div>
 
               {/* Content */}
-              <div className="flex-1">
+              <motion.div
+                variants={itemVariants}
+                className="flex-1"
+              >
                 <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 sm:mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
 
               {/* CTA Button */}
-              <a
+              <motion.a
                 href="#"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
                 className="mt-4 sm:mt-5 relative inline-block px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 font-semibold text-blue-700 border-2 border-[#066BAA] rounded-full overflow-hidden group text-sm sm:text-base"
               >
                 <span className="absolute inset-0 bg-[#066BAA] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-out rounded-full"></span>
                 <span className="relative z-10 group-hover:text-white transition-colors duration-300">
                   {service.cta}
                 </span>
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

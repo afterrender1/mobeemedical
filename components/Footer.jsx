@@ -4,6 +4,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Footer() {
   // Animation variants
@@ -28,7 +29,11 @@ export default function Footer() {
   };
 
   const linkHover = {
-    hover: { x: 4, color: "#ffffff" },
+    hover: { x: 6, color: "#ffffff", transition: { duration: 0.3 } },
+  };
+
+  const socialHover = {
+    hover: { scale: 1.25, rotate: 360, transition: { duration: 0.5 } },
   };
 
   return (
@@ -63,22 +68,22 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
+                variants={socialHover}
+                whileHover="hover"
                 className="text-gray-400 hover:text-white transition"
                 aria-label="Instagram"
               >
-                {/* <FaInstagram size={20} /> */}
                 <span className="text-xs">[Instagram]</span>
               </motion.a>
               <motion.a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: -5 }}
+                variants={socialHover}
+                whileHover="hover"
                 className="text-gray-400 hover:text-white transition"
                 aria-label="Facebook"
               >
-                {/* <FaFacebookF size={20} /> */}
                 <span className="text-xs">[Facebook]</span>
               </motion.a>
             </div>
@@ -90,7 +95,15 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">7070 Knights Court, Suite 1503</p>
             <p className="text-gray-400 text-sm">Missouri City, TX 77459</p>
             <p className="text-gray-400 text-sm mt-2">Phone: (713) 324-8884</p>
-            <p className="text-gray-400 text-sm">Email: info@mobeemedical.com</p>
+            <p className="text-gray-400 text-sm">
+              Email:{" "}
+              <a
+                href="mailto:info@mobeemedical.com"
+                className="underline hover:text-white transition"
+              >
+                info@mobeemedical.com
+              </a>
+            </p>
           </motion.div>
 
           {/* Quick Links */}
@@ -99,22 +112,23 @@ export default function Footer() {
             <ul className="space-y-1.5 text-sm">
               {[
                 { href: "/", label: "Home" },
-                { href: "/team", label: "Meet the Team" },
+                { href: "/ourteam", label: "Meet the Team" },
                 { href: "/appointment", label: "Book Appointment" },
                 { href: "/blog", label: "Blog" },
-                { href: "/contact", label: "Contact Us" },
+                { href: "/contactus", label: "Contact Us" },
                 { href: "/privacy-policy", label: "Privacy Policy" },
                 { href: "/terms", label: "Terms & Conditions" },
               ].map((link) => (
                 <li key={link.href}>
-                  <motion.a
-                    href={link.href}
-                    variants={linkHover}
-                    whileHover="hover"
-                    className="text-gray-400 hover:text-white transition block"
-                  >
-                    {link.label}
-                  </motion.a>
+                  <Link href={link.href} passHref legacyBehavior>
+                    <motion.a
+                      variants={linkHover}
+                      whileHover="hover"
+                      className="text-gray-400 hover:text-white transition block"
+                    >
+                      {link.label}
+                    </motion.a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -126,7 +140,7 @@ export default function Footer() {
           variants={itemVariants}
           className="border-t border-white/20 mt-8 pt-6 text-center text-gray-500 text-xs sm:text-sm"
         >
-          © 2024 Mobee Medical - All Rights Reserved
+          © 2024 AfterRender - All Rights Reserved
         </motion.div>
       </motion.div>
     </footer>
