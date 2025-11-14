@@ -66,7 +66,9 @@ export default function PreventativeCarePage() {
         </section>
 
         {/* Why Preventative Care Matters */}
-        <section className="py-16 sm:py-20 md:py-28 bg-white">
+        <section className="py-16 sm:py-20 md:py-28 bg-white"
+        style={{ fontFamily: "Poppins, sans-serif" }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
 
@@ -136,7 +138,9 @@ export default function PreventativeCarePage() {
         </section>
 
         {/* What’s Included */}
-        <section className="py-16 sm:py-20 md:py-28 bg-linear-to-br from-[#066BAA]/4 to-teal-50">
+        <section className="py-16 sm:py-20 md:py-28 bg-linear-to-br from-[#066BAA]/4 to-teal-50"
+        style={{ fontFamily: "Poppins, sans-serif" }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -184,7 +188,9 @@ export default function PreventativeCarePage() {
         </section>
 
         {/* When to Seek Care */}
-        <section className="py-16 sm:py-20 md:py-28 bg-white">
+        <section className="py-16 sm:py-20 md:py-28 bg-white" 
+        style={{ fontFamily: "Poppins, sans-serif" }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
 
@@ -256,7 +262,7 @@ export default function PreventativeCarePage() {
         </section>
 
         {/* Mobee Difference + CTA */}
-        <section className="py-16 sm:py-20 md:py-28 bg-linear-to-br from-[#066BAA]/6 to-teal-50 text-center">
+        <section className="py-16 sm:py-20 md:py-28 bg-linear-to-br from-[#066BAA]/6 to-teal-50 text-center" style={{ fontFamily: "Poppins, sans-serif" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
