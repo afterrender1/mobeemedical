@@ -2,9 +2,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { CheckCircle2, Shield, Clock } from "lucide-react";
+import { CheckCircle2, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -15,35 +14,37 @@ export default function ImmigrationExamPage() {
 
       {/* Hero Section */}
       <section
-        className="bg-linear-to-br from-[#066BAA]/5 via-white to-teal-50 py-24"
+        className="bg-linear-to-br from-[#066BAA]/5 via-white to-teal-50 py-16 sm:py-20 md:py-24"
         style={{ fontFamily: "Poppins" }}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 md:mb-6 leading-tight">
               Immigration Medical Exams (I-693)
             </h1>
-            <p className="text-xl text-slate-600 mb-4">Missouri City, Texas</p>
-            <p className="text-2xl text-[#066BAA] font-bold mb-8 flex items-center justify-center gap-3">
-              <Shield className="w-8 h-8" />
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-2 sm:mb-4">
+              Missouri City, Texas
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-[#066BAA] font-bold mb-6 sm:mb-8 flex items-center justify-center gap-2 sm:gap-3">
+              <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
               USCIS Certified Civil Surgeon – Dr. Odia
             </p>
-            <p className="text-lg text-slate-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-slate-700 max-w-2xl sm:max-w-3xl md:max-w-4xl mx-auto leading-relaxed">
               Are you in need of a USCIS immigration physical (I-693 medical exam)? We provide comprehensive, efficient, and USCIS-compliant immigration medical exams in a professional and family-friendly environment. Dr. Patrick Odia is a certified Civil Surgeon authorized by USCIS, and we’re here to make this process as smooth as possible for you and your loved ones.
             </p>
           </motion.div>
 
-          {/* Hero Image - Smaller, Elegant */}
+          {/* Hero Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.9 }}
-            className="mt-16 max-w-4xl mx-auto"
+            className="mt-10 sm:mt-12 md:mt-16 max-w-full sm:max-w-3xl md:max-w-4xl mx-auto"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <Image
@@ -55,9 +56,13 @@ export default function ImmigrationExamPage() {
                 priority
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
-              <div className="absolute bottom-8 left-8 text-white">
-                <p className="text-3xl font-bold">Fast. Accurate. Approved.</p>
-                <p className="text-lg mt-1">Results in 2–3 days</p>
+              <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 text-white">
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold">
+                  Fast. Accurate. Approved.
+                </p>
+                <p className="text-sm sm:text-base md:text-lg mt-1">
+                  Results in 2–3 days
+                </p>
               </div>
             </div>
           </motion.div>
@@ -65,19 +70,18 @@ export default function ImmigrationExamPage() {
       </section>
 
       {/* What’s Included */}
-      <section className="py-24 bg-white" style={{fontFamily : "poppins"}}>
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 sm:py-20 md:py-24 bg-white" style={{ fontFamily: "Poppins" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-slate-900 text-center mb-16"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 text-center mb-8 sm:mb-12 md:mb-16"
           >
             What’s Included in Your Immigration Exam?
-            
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl sm:max-w-4xl md:max-w-5xl mx-auto">
             {[
               "Physical examination by a Civil Surgeon",
               "Review and documentation of vaccination records",
@@ -91,10 +95,10 @@ export default function ImmigrationExamPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-5 bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                className="flex items-start gap-3 sm:gap-4 md:gap-5 bg-slate-50 p-4 sm:p-6 md:p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
               >
-                <CheckCircle2 className="w-8 h-8 text-[#066BAA] shrink-0 mt-0.5" />
-                <p className="text-lg text-slate-700 leading-relaxed font-medium">{item}</p>
+                <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-8 text-[#066BAA] shrink-0 mt-0.5" />
+                <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed font-medium">{item}</p>
               </motion.div>
             ))}
           </div>
@@ -102,11 +106,11 @@ export default function ImmigrationExamPage() {
       </section>
 
       {/* All-Inclusive Fee */}
-      <section className="py-28 bg-linear-to-br from-[#066BAA]/4 via-white to-teal-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            {/* Left: Image - Smaller, Refined */}
+      <section className="py-16 sm:py-20 md:py-28 bg-linear-to-br from-[#066BAA]/4 via-white to-teal-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+
+            {/* Left: Image */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -114,7 +118,7 @@ export default function ImmigrationExamPage() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <div className="relative group max-w-md mx-auto lg:mx-0">
+              <div className="relative group max-w-full sm:max-w-md md:max-w-lg mx-auto lg:mx-0">
                 <div className="rounded-lg overflow-hidden shadow-2xl">
                   <Image
                     src="/images/bpcheck.png"
@@ -126,8 +130,8 @@ export default function ImmigrationExamPage() {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
                 </div>
-                <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-lg border border-slate-200">
-                  <p className="font-bold text-[#066BAA] text-base">All-Inclusive</p>
+                <div className="absolute top-3 sm:top-4 md:top-6 right-3 sm:right-4 md:right-6 bg-white/95 backdrop-blur-sm px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full shadow-lg border border-slate-200">
+                  <p className="font-bold text-[#066BAA] text-sm sm:text-base md:text-base">All-Inclusive</p>
                 </div>
               </div>
             </motion.div>
@@ -139,13 +143,13 @@ export default function ImmigrationExamPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="order-1 lg:order-2"
-              style={{fontFamily : "poppins"}}
+              style={{ fontFamily: "Poppins" }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-10">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 sm:mb-8 md:mb-10">
                 All-Inclusive Fee
               </h2>
 
-              <div className="space-y-6 mb-10">
+              <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-8 md:mb-10">
                 {[
                   "Physical examination",
                   "Required lab testing",
@@ -159,12 +163,12 @@ export default function ImmigrationExamPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.08 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-5"
+                    className="flex items-center gap-3 sm:gap-4 md:gap-5"
                   >
-                    <div className="w-10 h-10 bg-[#066BAA]/10 rounded-full flex items-center justify-center">
-                      <CheckCircle2 className="w-6 h-6 text-[#066BAA]" />
+                    <div className="w-8 h-8 sm:w-9 sm:h-10 md:w-10 md:h-10 bg-[#066BAA]/10 rounded-full flex items-center justify-center">
+                      <CheckCircle2 className="w-5 h-5 sm:w-5 sm:h-6 md:w-6 md:h-6 text-[#066BAA]" />
                     </div>
-                    <p className="text-lg text-slate-700 font-medium">{item}</p>
+                    <p className="text-sm sm:text-base md:text-lg text-slate-700 font-medium">{item}</p>
                   </motion.div>
                 ))}
               </div>
@@ -174,24 +178,20 @@ export default function ImmigrationExamPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-linear-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-4 shadow-inner"
+                className="bg-linear-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-3 sm:p-3.5 md:p-4 shadow-inner"
               >
-                <p className="text-amber-900  text-lg leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-lg text-amber-900 leading-relaxed">
                   Please note: Vaccinations are not included in the fee and may require additional cost. 
                   Immigration physicals are not covered by insurance. 
                   We accept cash and all major debit and credit cards.
                 </p>
               </motion.div>
-
-            
             </motion.div>
           </div>
         </div>
       </section>
 
-      <Footer/>
-
- 
+      <Footer />
     </>
   );
 }
