@@ -29,38 +29,40 @@ const MeetOurTeam = () => {
   return (
     <>
       <Navbar />
-      <section className="bg-linear-to-b from-slate-50 to-white py-24 px-6 overflow-hidden" style={{ fontFamily: "Poppins, sans-serif" }}>
+      <section
+        className="bg-linear-to-b from-slate-50 to-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{ fontFamily: "Poppins, sans-serif" }}
+      >
         <div className="max-w-7xl mx-auto">
           {/* Hero Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-20 px-2 sm:px-0"
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight">
               Meet Our Dedicated Team
             </h2>
-            <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
               Exceptional care starts with exceptional people. Get to know the experts behind your health.
             </p>
-  <div className="mt-6 w-24 h-1 bg-blue-600 rounded-full mx-auto"></div>
-
+            <div className="mt-4 sm:mt-6 w-20 sm:w-24 h-1 bg-blue-600 rounded-full mx-auto"></div>
           </motion.div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: index * 0.2 }}
-                whileHover={{ y: -8 }}
-                className="group relative bg-white rounded-lg shadow-md  transition-all duration-500 overflow-hidden border border-slate-100"
+                whileHover={{ y: -6 }}
+                className="group relative bg-white rounded-lg shadow-md transition-all duration-500 overflow-hidden border border-slate-100"
               >
                 {/* Image Container */}
-                <div className="relative h-160 overflow-hidden">
+                <div className="relative h-96 sm:h-112 md:h-150 overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -68,23 +70,23 @@ const MeetOurTeam = () => {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
-                  
+
                   {/* Role Badge */}
-                  <div className="absolute bottom-6 left-6">
-                    <span className="bg-white/95 backdrop-blur-sm text-slate-800 font-semibold px-5 py-2 rounded-full text-sm tracking-wide shadow-md">
+                  <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6">
+                    <span className="bg-white/95 backdrop-blur-sm text-slate-800 font-semibold px-3 sm:px-5 py-1 sm:py-2 rounded-full text-xs sm:text-sm tracking-wide shadow-md">
                       {member.role}
                     </span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-10">
-                  <h3 className="text-3xl font-bold text-slate-900 mb-2">
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
                     {member.name}
                   </h3>
-                  <div className="w-20 h-1 bg-linear-to-r from-teal-500 to-emerald-600 rounded-full mb-6"></div>
-                  
-                  <p className="text-slate-600 leading-relaxed text-base whitespace-pre-line">
+                  <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-teal-500 to-emerald-600 rounded-full mb-4 sm:mb-6"></div>
+
+                  <p className="text-slate-600 leading-relaxed text-sm sm:text-base whitespace-pre-line">
                     {member.info}
                   </p>
                 </div>
@@ -100,20 +102,24 @@ const MeetOurTeam = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="text-center mt-20"
+            className="text-center mt-12 sm:mt-16 lg:mt-20 px-2 sm:px-0"
           >
-            <p className="text-slate-600 text-lg">
+            <p className="text-sm sm:text-base md:text-lg text-slate-600">
               Ready to experience personalized care?{" "}
-              <a href="/contact" className="text-teal-600 font-semibold hover:text-teal-700 transition">
-               Schedule a visit →
+              <a
+                href="/contact"
+                className="text-teal-600 font-semibold hover:text-teal-700 transition"
+              >
+                Schedule a visit →
               </a>
             </p>
           </motion.div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default MeetOurTeam;
+ 
