@@ -17,7 +17,7 @@ export default function Navbar() {
     { name: "IMMIGRATION PHYSICALS", href: "/immigration-physicals" },
     { name: "PREVENTATIVE SERVICES", href: "/preventative-services" },
     { name: "WEIGHTLOSS MANAGEMENT", href: "/weightloss-management" },
-    { name: "ACUTE AND CHRONIC CARE MANAGEMENT", href: "/services/whitening" },
+    { name: "ACUTE AND CHRONIC CARE MANAGEMENT", href: "/acute-chronic-management" },
   ];
 
   return (
