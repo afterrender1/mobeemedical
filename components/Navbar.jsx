@@ -15,7 +15,7 @@ export default function Navbar() {
 
   const serviceLinks = [
     { name: "IMMIGRATION PHYSICALS", href: "/immigration-physicals" },
-    { name: "PREVENTATIVE SERVICES", href: "/services/cosmetic" },
+    { name: "PREVENTATIVE SERVICES", href: "/preventative-services" },
     { name: "WEIGHTLOSS MANAGEMENT", href: "/services/orthodontics" },
     { name: "ACUTE AND CHRONIC CARE MANAGEMENT", href: "/services/whitening" },
   ];
