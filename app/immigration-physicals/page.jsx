@@ -16,7 +16,7 @@ export default function ImmigrationExamPage() {
       {/* Hero Section */}
       <section
         className="bg-linear-to-br from-[#066BAA]/5 via-white to-teal-50 py-24"
-        style={{ fontFamily: "Poppins, sans-serif" }}
+        style={{ fontFamily: "Poppins" }}
       >
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -65,7 +65,7 @@ export default function ImmigrationExamPage() {
       </section>
 
       {/* What’s Included */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white" style={{fontFamily : "poppins"}}>
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -74,6 +74,7 @@ export default function ImmigrationExamPage() {
             className="text-4xl md:text-5xl font-bold text-slate-900 text-center mb-16"
           >
             What’s Included in Your Immigration Exam?
+            
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
