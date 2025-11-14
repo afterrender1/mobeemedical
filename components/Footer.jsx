@@ -109,29 +109,30 @@ export default function Footer() {
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
             <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Quick Links</h3>
-            <ul className="space-y-1.5 text-sm">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/ourteam", label: "Meet the Team" },
-                { href: "/appointment", label: "Book Appointment" },
-                { href: "/blog", label: "Blog" },
-                { href: "/contactus", label: "Contact Us" },
-                { href: "/privacy-policy", label: "Privacy Policy" },
-                { href: "/terms", label: "Terms & Conditions" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} passHref legacyBehavior>
-                    <motion.a
-                      variants={linkHover}
-                      whileHover="hover"
-                      className="text-gray-400 hover:text-white transition block"
-                    >
-                      {link.label}
-                    </motion.a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+           <ul className="space-y-1.5 text-sm">
+  {[
+    { href: "/", label: "Home" },
+    { href: "/ourteam", label: "Meet the Team" },
+    { href: "/appointment", label: "Book Appointment" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contactus", label: "Contact Us" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms", label: "Terms & Conditions" },
+  ].map((link) => (
+    <li key={link.href}>
+      <Link href={link.href} className="block">
+        <motion.span
+          variants={linkHover}
+          whileHover="hover"
+          className="text-gray-400 hover:text-white transition block"
+        >
+          {link.label}
+        </motion.span>
+      </Link>
+    </li>
+  ))}
+</ul>
+
           </motion.div>
         </div>
 

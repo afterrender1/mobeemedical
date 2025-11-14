@@ -38,9 +38,6 @@ export default function Care() {
     hover: { x: 6, scale: 1.02 },
   };
 
-  const imageHover = {
-    hover: { scale: 1.05 },
-  };
 
   return (
     <>
@@ -86,10 +83,9 @@ export default function Care() {
           {/* Left Image */}
           <motion.div
             variants={itemVariants}
-            whileHover="hover"
             className="flex-1 relative w-full h-[280px] xs:h-[320px] sm:h-[380px] md:h-[450px] lg:h-[520px] xl:h-[600px] rounded-2xl overflow-hidden shadow-lg"
           >
-            <motion.div variants={imageHover}>
+            <motion.div >
               <Image
                 src="/images/care.png"
                 alt="Comprehensive Care"
