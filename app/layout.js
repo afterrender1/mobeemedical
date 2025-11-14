@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Mobee Medical",
   description: "Your partner in better health and wellness",
+   icons: {
+    icon: "/logo/bigicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

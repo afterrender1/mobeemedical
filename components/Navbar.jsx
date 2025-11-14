@@ -112,7 +112,7 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link href="/portal" className="hover:text-[#066BAA] transition">
+            <Link href="/patient-portal" className="hover:text-[#066BAA] transition">
               Patient Portal
             </Link>
           </li>
@@ -222,7 +222,7 @@ export default function Navbar() {
 
               <li>
                 <Link
-                  href="/portal"
+                  href="/patient-portal"
                   className="block hover:text-[#066BAA] transition"
                   onClick={() => setMobileOpen(false)}
                 >
