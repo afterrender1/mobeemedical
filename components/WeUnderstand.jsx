@@ -87,7 +87,7 @@ const WeUnderstand = () => {
           >
             <video
               className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
-              src="/videos/CHECKINGBP.mp4"
+              src="/videos/checkingbp.mp4"
               autoPlay
               muted
               loop
